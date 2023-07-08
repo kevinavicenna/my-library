@@ -71,7 +71,7 @@
         </center>
     </div>
     <div class="kaki">
-        Copyright @2023 | Diego Alf
+    © 2023 Kevin Avicenna, Ivanda Gabrila, Imaduddin Mustofa 
     </div>
 
     <?php
