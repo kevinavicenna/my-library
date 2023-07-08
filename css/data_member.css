@@ -1,0 +1,269 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Style untuk header*/
+.wraper {
+    margin: 20px 20px 20px 20px;
+}
+
+/*Style untuk header*/
+.kepala {
+    background-color: green;
+    text-align: center;
+    color: white;
+    height: 300px;
+}
+
+
+/*Style untuk konten*/
+.konten {
+    font-size: 15px;
+    margin-top: 40px;
+    float: left;
+    padding: 10px;
+    width: 100%;
+    background-color: #f1f1f1;
+    height: 630px;
+    border-radius: 20px;
+}
+
+/*Style untuk footer*/
+.kaki {
+    clear: both;
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+body {
+    font-size: 12px;
+    font-family: sans-serif;
+    background: #2c3e50;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #ecf0f1;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: "Cherry Swash", cursive;
+}
+
+p {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #ecf0f1;
+    font-family: "Cherry Swash", cursive;
+    font-size: 16px;
+}
+
+span {
+    color: #2bd6b4;
+}
+
+nav {
+    position: absolute;
+    top: 3%;
+    right: 0;
+    left: 0;
+    width: 409px;
+    display: table;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+nav a {
+    position: relative;
+    width: 33.333%;
+    display: table-cell;
+    text-align: center;
+    color: #949494;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+}
+
+nav a:before,
+nav a:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+}
+
+nav a:before {
+    top: 0;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+}
+
+nav a:after {
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px;
+}
+
+nav a:nth-child(1):before {
+    background-color: yellow;
+}
+
+nav a:nth-child(1):after {
+    background-color: red;
+}
+
+nav a:nth-child(2):before {
+    background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after {
+    background-color: #89ff00;
+}
+
+nav a:nth-child(3):before {
+    background-color: purple;
+}
+
+nav a:nth-child(3):after {
+    background-color: palevioletred;
+}
+
+#indicator {
+    position: absolute;
+    left: 76%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+    transform: scale(1);
+}
+
+nav a:nth-child(1):hover~#indicator {
+    background: linear-gradient(130deg, yellow, red);
+}
+
+nav a:nth-child(2):hover~#indicator {
+    left: 46%;
+    background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover~#indicator {
+    left: 74%;
+    background: linear-gradient(130deg, purple, palevioletred);
+}
+
+.button-16 {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    cursor: pointer;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    height: 36px;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 16px;
+    margin-top: 20px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: pre;
+}
+
+.button-16:hover {
+    border-color: #dadce0;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+    color: #202124;
+}
+
+.button-16:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e5e5e5;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 10%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 25%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 15%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 20%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 10%;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+    width: 15%;
+}
+
+th:nth-child(7),
+td:nth-child(7) {
+    width: 5%;
+    text-align: center;
+}

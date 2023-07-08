@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Style untuk header*/
+.wraper {
+    margin: 20px 20px 20px 20px;
+}
+
+/*Style untuk header*/
+.kepala {
+    background-color: green;
+    text-align: center;
+    color: white;
+    height: 300px;
+}
+
+
+/*Style untuk konten*/
+.konten {
+    margin-top: 40px;
+    float: left;
+    padding: 20px;
+    width: 100%;
+    background-color: #f1f1f1;
+    height: 630px;
+    border-radius: 8px;
+}
+
+/*Style untuk footer*/
+.kaki {
+    clear: both;
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+body {
+    font-size: 12px;
+    font-family: sans-serif;
+    background: #2c3e50;
+}
+
+[type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 30%;
+    background: #CC6666;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+[type="submit"]:hover {
+    background: #CC4949;
+}
+
+form {
+    max-width: 420px;
+    margin: 50px auto;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
