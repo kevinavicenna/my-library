@@ -22,7 +22,7 @@
     </nav>
     <div class="konten">
         <center>
-            <h2>Data buku</h2>
+            <h2>Data Buku</h2>
             <table border="1" width="90%" cellspacing="0">
                 <tr>
                     <th align="center">ID Buku</th>
