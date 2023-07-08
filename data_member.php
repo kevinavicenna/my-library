@@ -25,7 +25,6 @@
             <table border="1" width="90%" cellspacing="0">
                 <tr>
                     <th align="center">ID Peminjaman</th>
-                    <th align="center">Judul Buku</th>
                     <th align="center">judul Buku</th>
                     <th align="center">Nama</th>
                     <th align="center">Nim</th>
