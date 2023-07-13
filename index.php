@@ -10,16 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="app/assets/compiled/css/app.css" />
+    <link rel="stylesheet" href="app/assets/compiled/css/app-dark.css" />
 </head>
-
-<?php
-    $x = ISSET($_GET['error']);
-    if($x == 1){
-        echo "<script>alert('Login Gagal')</script>";
-    }else{
-        echo "";
-    }
-?>
 
 <body>
     <section class="h-100 gradient-form" style="background-color: #eee;">
@@ -69,6 +62,19 @@
             </div>
         </div>
     </section>
+    <script src="app/assets/static/js/components/dark.js"></script>
+    <script src="app/assets/compiled/js/app.js"></script>
 </body>
-
+    <?php
+        if (ISSET ($_GET['error'])){
+            $x = ($_GET['error']);
+            if($x == 1){
+                echo "<script>alert('Login Gagal')</script>";
+            }else if($x == 2){
+                echo "<script>alert('Silahkan Masukkan Username & Password')</script>";
+            }else{
+                echo '';
+            }
+        }
+    ?>
 </html>
