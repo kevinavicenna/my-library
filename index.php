@@ -13,43 +13,6 @@
 </head>
 
 <body>
-    <?php
-    include_once('config.php');
-    session_start();
-    error_reporting(0);
-    // error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
-    
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $submit = $_POST['submit'];
-
-    if ($submit) {
-        $sql = "select * from user where username='$username' and password='$password'";
-        $query = mysqli_query($conn, $sql);
-        $row = mysqli_fetch_array($query);
-
-        if ($row['username'] != "") {
-            //berhasil login
-            $_SESSION['username'] = $row['username'];
-            $_SESSION['status'] = $row['status'];
-    ?>
-            <script language script='JavaScript'>
-                alert('Anda Login Sebagai <?php echo $row['username']; ?>');
-                document.location = 'peminjaman.php'
-            </script>
-        <?php
-        } else {
-            //gagal login
-        ?>
-            <script language script='JavaScript'>
-                alert('Gagal Login');
-                document.location = 'login_admin.php'
-            </script>
-    <?php
-        }
-    }
-    ?>
-
     <section class="h-100 gradient-form" style="background-color: #eee;">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -64,7 +27,7 @@
                                         <h4 class="mt-1 mb-5 pb-1">UMS LIBRARY PAGE</h4>
                                     </div>
 
-                                    <form action="login_admin.php" method="POST">
+                                    <form action="conf/auth.php" method="POST">
                                         <p>Please login to your <b>ADMIN ACCOUNT</b></p>
 
                                         <div class="form-outline mb-4">
