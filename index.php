@@ -12,6 +12,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
 
+<?php
+    $x = ISSET($_GET['error']);
+    if($x == 1){
+        echo "<script>alert('Login Gagal')</script>";
+    }else{
+        echo "";
+    }
+?>
+
 <body>
     <section class="h-100 gradient-form" style="background-color: #eee;">
         <div class="container py-5 h-100">
