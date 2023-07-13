@@ -2,7 +2,10 @@
 <html lang="en">
 
 <!-- Header -->
-  <?php include ('includes/header.php'); ?>
+  <?php
+    session_start(); 
+    include ('includes/header.php'); 
+  ?>
   <?php include('../conf/config.php') ?>
 <!-- End of Header -->
 
@@ -22,7 +25,7 @@
         </header>
 
         <!-- Main Content -->
-          <?php include('admin/data-buku.php'); ?>
+          <?php include('includes/dashboard.php'); ?>
         <!-- End of Main Content -->
 
         <!-- Footer -->
