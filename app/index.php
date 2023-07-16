@@ -19,32 +19,37 @@
       <!-- Sidebar -->
         <?php include ('includes/sidebar.php'); ?>
       <!-- End of Sidebar -->
+
+      <!-- Navbar -->
+        
+      <!-- End of Navbar -->
       
-      <div id="main">
+      <div id="main" class="layout-navbar navbar-fixed">
         <header class="mb-3">
-          <a href="#" class="burger-btn d-block d-xl-none">
-            <i class="bi bi-justify fs-3"></i>
-          </a>
+          <?php include ('includes/navbar.php'); ?>
         </header>
 
         <!-- Main Content --> 
+        <div id="main-content">
           <?php 
-            if (ISSET($_GET['page'])){
-              if ($_GET['page'] == 'dashboard'){
-                include('includes/dashboard.php');
-              }else if($_GET['page'] == 'daftar-buku'){
-                include('page-admin/buku/buku-daftar.php'); 
-              }else if($_GET['page'] == 'daftar-kategori'){
-                include('page-admin/kategori/kategori-daftar.php'); 
-              }else if($_GET['page'] == 'daftar-member'){
-                include('page-admin/member/member-daftar.php'); 
+              if (ISSET($_GET['page'])){
+                if ($_GET['page'] == 'dashboard'){
+                  include('includes/dashboard.php');
+                }else if($_GET['page'] == 'daftar-buku'){
+                  include('page-admin/buku/buku-daftar.php'); 
+                }else if($_GET['page'] == 'daftar-kategori'){
+                  include('page-admin/kategori/kategori-daftar.php'); 
+                }else if($_GET['page'] == 'daftar-member'){
+                  include('page-admin/member/member-daftar.php'); 
+                }else{
+                  include('includes/404.php');
+                } 
               }else{
-                include('includes/404.php');
-              } 
-            }else{
-              include('includes/dashboard.php');
-            }
-          ?>
+                include('includes/dashboard.php');
+              }
+            ?>
+        </div>
+          
         <!-- End of Main Content -->
 
         <!-- Footer -->

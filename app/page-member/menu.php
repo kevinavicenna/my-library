@@ -33,12 +33,12 @@
                 <span>Kritik dan Saran</span>
             </a>
         </li>
-        <li class="sidebar-item">
+        <!-- <li class="sidebar-item">
             <a href="includes/log-out.php" class="sidebar-link">
                 <i class="fas fa-power-off"></i>
                 <span>Log out</span>
             </a>
-        </li>
+        </li> -->
     </ul>
 </div>
 </div>
