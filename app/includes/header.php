@@ -26,4 +26,15 @@
     <link rel="stylesheet" href="./assets/compiled/css/table-datatable.css" />
     <link rel="stylesheet" href="./assets/compiled/css/app.css" />
     <link rel="stylesheet" href="./assets/compiled/css/app-dark.css" />
+
+
+    <link
+      rel="stylesheet"
+      href="assets/extensions/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="assets/extensions/toastify-js/src/toastify.css"
+    />
   </head>

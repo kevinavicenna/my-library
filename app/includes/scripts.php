@@ -10,3 +10,11 @@
 <!-- Datatable -->
 <script src="assets/extensions/simple-datatables/umd/simple-datatables.js"></script>
 <script src="assets/static/js/pages/simple-datatables.js"></script>
+
+<!-- Choises -->
+<script src="./assets/extensions/choices.js/public/assets/scripts/choices.js"></script>
+<script src="./assets/static/js/pages/form-element-select.js"></script>
+
+<!-- Toastify -->
+<script src=".assets/extensions/toastify-js/src/toastify.js"></script>
+<script src=".assets/static/js/pages/toastify.js"></script>
