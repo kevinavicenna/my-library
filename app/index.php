@@ -3,10 +3,13 @@
 
 <!-- Header -->
   <?php
-    session_start(); 
+    session_start();
+    if(!$_SESSION['nama']){
+      header('Location: ../index.php?session=expired');
+    } 
     include ('includes/header.php'); 
   ?>
-  <?php include('../conf/config.php') ?>
+  <?php include('../conf/config.php'); ?>
 <!-- End of Header -->
 
   <body>
@@ -24,8 +27,24 @@
           </a>
         </header>
 
-        <!-- Main Content -->
-          <?php include('includes/dashboard.php'); ?>
+        <!-- Main Content --> 
+          <?php 
+            if (ISSET($_GET['page'])){
+              if ($_GET['page'] == 'dashboard'){
+                include('includes/dashboard.php');
+              }else if($_GET['page'] == 'daftar-buku'){
+                include('page-admin/buku/buku-daftar.php'); 
+              }else if($_GET['page'] == 'daftar-kategori'){
+                include('page-admin/kategori/kategori-daftar.php'); 
+              }else if($_GET['page'] == 'daftar-member'){
+                include('page-admin/member/member-daftar.php'); 
+              }else{
+                include('includes/404.php');
+              } 
+            }else{
+              include('includes/dashboard.php');
+            }
+          ?>
         <!-- End of Main Content -->
 
         <!-- Footer -->
@@ -36,5 +55,6 @@
     <!-- Scripts -->
       <?php include('includes/scripts.php'); ?>
     <!-- End of Scripts -->
+
   </body>
 </html>
