@@ -31,22 +31,46 @@
 
         <!-- Main Content --> 
         <div id="main-content">
-          <?php 
-              if (ISSET($_GET['page'])){
-                if ($_GET['page'] == 'dashboard'){
-                  include('includes/dashboard.php');
-                }else if($_GET['page'] == 'daftar-buku'){
-                  include('page-admin/buku/buku-daftar.php'); 
-                }else if($_GET['page'] == 'daftar-kategori'){
-                  include('page-admin/kategori/kategori-daftar.php'); 
-                }else if($_GET['page'] == 'daftar-member'){
-                  include('page-admin/member/member-daftar.php'); 
-                }else{
-                  include('includes/404.php');
-                } 
-              }else{
-                include('includes/dashboard.php');
-              }
+          <?php
+                if($_SESSION['status']=='administrator'){
+                  if (ISSET($_GET['page'])){
+                    if ($_GET['page'] == 'dashboard'){
+                      include('includes/dashboard.php');
+                    }else if($_GET['page'] == 'daftar-buku'){
+                      include('page-admin/buku/buku-daftar.php'); 
+                    }else if($_GET['page'] == 'daftar-kategori'){
+                      include('page-admin/kategori/kategori-daftar.php'); 
+                    }else if($_GET['page'] == 'daftar-member'){
+                      include('page-admin/member/member-daftar.php'); 
+                    }else if($_GET['page'] == 'peminjaman'){
+                      include('page-admin/peminjaman/peminjaman-daftar.php'); 
+                    }else if($_GET['page'] == 'pengembalian'){
+                      include('page-admin/pengembalian/pengembalian-daftar.php'); 
+                    }else if($_GET['page'] == 'kritik-saran'){
+                      include('page-admin/krisar/krisar-daftar.php'); 
+                    }else{
+                      include('includes/404.php');
+                    } 
+                  }else{
+                    include('includes/dashboard.php');
+                  }
+                }else if($_SESSION['status']=='member'){
+                  if (ISSET($_GET['page'])){
+                    if ($_GET['page'] == 'dashboard'){
+                      include('includes/dashboard.php');
+                    }else if($_GET['page'] == 'katalog-buku'){
+                      include('page-member/katalog-buku.php'); 
+                    }else if($_GET['page'] == 'peminjaman'){
+                      include('page-member/peminjaman/peminjaman-daftar.php'); 
+                    }else if($_GET['page'] == 'kritik-saran'){
+                      include('page-member/krisar/krisar-daftar.php'); 
+                    }else{
+                      include('includes/404.php');
+                    }
+                  }else{
+                    include('includes/dashboard.php');
+                  }
+                }
             ?>
         </div>
           
