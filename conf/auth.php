@@ -15,8 +15,9 @@ if(mysqli_num_rows($query)==1){
 }else if(mysqli_num_rows($query2)==1){
     header('Location:../app');
     $member = mysqli_fetch_array($query2);
-    $_SESSION['nama'] = $member['nama'];
-    $_SESSION['status'] = $member['status'];
+    $_SESSION['nama']      = $member['nama'];
+    $_SESSION['status']    = $member['status'];
+    $_SESSION['id_member'] = $member['id_member'];
 }else if($username == '' || $password == ''){
     header('Location:../index.php?error=2');
 }else{

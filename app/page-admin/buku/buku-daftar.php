@@ -12,7 +12,10 @@
         <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="index.html">Dashboard</a>
+              <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="">Buku</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
               Daftar Buku
@@ -46,6 +49,7 @@
               <th>ISBN</th>
               <th>Jumlah</th>
               <th>Lokasi</th>
+              <th>Tanggal Penambahan</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -63,7 +67,7 @@
                 <td>
                   <?php echo $list_buku['id_buku']; ?>
                 </td>
-                <td><img width="100px" src="assets\compiled\jpg\<?php echo $list_buku['cover']; ?>"></td>
+                <td><img width="100px" src="assets/compiled/jpg/buku/<?php echo $list_buku['cover']; ?>"></td>
                 <td>
                   <?php echo $list_buku['judul']; ?>
                 </td>
@@ -76,12 +80,17 @@
                 <td>
                   <?php echo $list_buku['isbn']; ?>
                 </td>
-                <td>
+                <td align="center">
                   <?php echo $list_buku['jumlah']; ?>
                 </td>
                 <td>
-                  <p>rak
+                  <p>Rak 
                     <?php echo $list_buku['rak']; ?>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                  <?php echo date('d-m-Y', strtotime($list_buku['tgl_tambah'])); ?>
                   </p>
                 </td>
                 <td width="15%">

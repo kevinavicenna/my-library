@@ -12,7 +12,10 @@
         <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="index.html">Dashboard</a>
+              <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="">Buku</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
               Daftar Kategori
@@ -55,7 +58,7 @@
                   <?php echo $no; ?>
                 </td>
                 <td>
-                  <?php echo $list_kategori['id_kategori']; ?>
+                  <span class="badge bg-info"><?php echo $list_kategori['id_kategori']; ?></span>
                 </td>
                 <td>
                   <?php echo $list_kategori['nama_kategori']; ?>
