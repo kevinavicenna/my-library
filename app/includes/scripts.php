@@ -18,3 +18,7 @@
 <!-- Toastify -->
 <script src=".assets/extensions/toastify-js/src/toastify.js"></script>
 <script src=".assets/static/js/pages/toastify.js"></script>
+
+<!-- Flatpickr -->
+<script src="assets/extensions/flatpickr/flatpickr.min.js"></script>
+<script src="assets/static/js/pages/date-picker.js"></script>
