@@ -3,7 +3,7 @@
         <li class="sidebar-title">Menu</li>
 
         <li class="sidebar-item active">
-            <a href="index.php" class="sidebar-link">
+            <a href="index.php?page=dashboard" class="sidebar-link">
                 <i class="bi bi-grid-fill"></i>
                 <span>Dashboard</span>
             </a>
@@ -22,7 +22,7 @@
             </ul>
         </li>
         <li class="sidebar-item">
-            <a href="index.php?page=kritik-saran" class="sidebar-link">
+            <a href="index.php?page=peminjaman" class="sidebar-link">
                 <i class="fas fa-user-edit"></i>
                 <span>Riwayat Peminjaman</span>
             </a>
