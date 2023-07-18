@@ -8,7 +8,7 @@
                 </h5>
             </div>
 
-            <form method="GET" action="page-admin/buku/buku-update.php">
+            <form method="POST" action="page-admin/buku/buku-update.php" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="row">
                         <div class="form-group">
@@ -52,8 +52,12 @@
                             <input type="number" class="form-control" name="jumlah" id="basicInput" value="<?php echo $list_buku['jumlah']; ?>" placeholder=" Masukkan Jumlah" required />
                         </div>
                         <div class="form-group">
-                            <label for="basicInput">Rak</label>
+                            <label for="basicInput">Nomor Rak</label>
                             <input type="text" class="form-control" name="rak" id="basicInput" value="<?php echo $list_buku['rak']; ?>" placeholder="Masukkan Nomor Rak" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="basicInput">Upload Cover</label>
+                            <input class="form-control" name="cover" type="file" id="formFile"/>
                         </div>
                     </div>
                 </div>

@@ -1,13 +1,20 @@
 <?php
     include('../../../conf/config.php');
-    $id       = $_GET['id'];
-    $judul    = $_GET['judul'];
-    $penulis  = $_GET['penulis'];
-    $penerbit = $_GET['penerbit'];
-    $kategori = $_GET['kategori'];
-    $isbn     = $_GET['isbn'];
-    $jumlah   = $_GET['jumlah'];
-    $rak      = $_GET['rak'];
-    $query = mysqli_query($koneksi, "INSERT INTO buku VALUE('$id', '', '$judul', '$penulis', '$penerbit', '$kategori', '$isbn', '$jumlah', '$rak')");
+    $id         = $_POST['id'];
+    $judul      = $_POST['judul'];
+    $penulis    = $_POST['penulis'];
+    $penerbit   = $_POST['penerbit'];
+    $kategori   = $_POST['kategori'];
+    $isbn       = $_POST['isbn'];
+    $jumlah     = $_POST['jumlah'];
+    $rak        = $_POST['rak'];
+    $tgl_tambah = $_POST['tgl_tambah'];
+    $cover      = $_FILES['cover']['name']; 
+
+    //Lokasi Cover
+    $file_tmp = $_FILES['cover']['tmp_name'];
+    move_uploaded_file($file_tmp, '../../assets/compiled/jpg/buku/' .$cover);
+    
+    $query = mysqli_query($koneksi, "INSERT INTO buku VALUE('$id', '$cover', '$judul', '$penulis', '$penerbit', '$kategori', '$isbn', '$jumlah', '$rak', '$tgl_tambah')");
     header('Location:../../index.php?page=daftar-buku');
 ?>

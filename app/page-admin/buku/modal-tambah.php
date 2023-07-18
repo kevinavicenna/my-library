@@ -7,7 +7,7 @@
                     Tambah Data Buku
                 </h5>
             </div>
-            <form method="GET" action="page-admin/buku/buku-tambah.php">
+            <form method="POST" action="page-admin/buku/buku-tambah.php" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="row">
                         <div class="form-group">
@@ -29,7 +29,7 @@
                         </div>
                         <div class="form-group">
                             <label for="basicInput">Kategori</label>
-                            <select class=".choices form-select" name='kategori' required>
+                            <select class="choices form-select" name='kategori' required>
                                 <option value="">Pilih Kategori</option>
                                 <?php
                                 $query2 = mysqli_query($koneksi, "SELECT * FROM kategori");
@@ -49,8 +49,16 @@
                             <input type="number" class="form-control" name="jumlah" id="basicInput" placeholder=" Masukkan Jumlah" required />
                         </div>
                         <div class="form-group">
-                            <label for="basicInput">Rak</label>
+                            <label for="basicInput">Nomor Rak</label>
                             <input type="text" class="form-control" name="rak" id="basicInput" placeholder="Masukkan Nomor Rak" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="basicInput">Tanggal Ditambahkan</label>
+                            <input type="date" name="tgl_tambah" class="form-control mb-3 flatpickr-no-config" placeholder="Masukkan Tanggal Ditambahkan" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="basicInput">Upload Cover</label>
+                            <input class="form-control" name="cover" type="file" id="formFile"/>
                         </div>
                     </div>
                 </div>
