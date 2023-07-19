@@ -19,10 +19,6 @@
       <!-- Sidebar -->
         <?php include ('includes/sidebar.php'); ?>
       <!-- End of Sidebar -->
-
-      <!-- Navbar -->
-        
-      <!-- End of Navbar -->
       
       <div id="main" class="layout-navbar navbar-fixed">
         <header class="mb-3">

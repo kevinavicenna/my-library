@@ -121,48 +121,51 @@
                                     <thead>
                                         <tr>
                                             <th>Nama</th>
-                                            <th>kategori</th>
-                                            <th>keterangan</th>
+                                            <th>Kategori</th>
+                                            <th>Pesan</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="col-3">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar avatar-md">
-                                                        <img src="./assets/compiled/jpg/5.jpg" />
-                                                    </div>
-                                                    <p class="font-bold ms-3 mb-0">Si Cantik</p>
-                                                </div>
-                                            </td>
-                                            <td class="col-auto">
-                                                <span class="badge bg-danger">Kritik</span>
-                                            </td>
-                                            <td class="col-auto">
-                                                <p class="mb-0">
-                                                    Congratulations on your graduation!
-                                                </p>
-                                            </td>
-                                        </tr>
+
+                                    <tbody>   
+                                    <?php 
+                                        $query = mysqli_query($koneksi, "SELECT * from krisar");
+                                        
+                                        while ($list_view = mysqli_fetch_array($query)){
+                                    ?>
+
                                         <tr>
                                             <td class="col-3">
                                                 <div class="d-flex align-items-center">
                                                     <div class="avatar avatar-md">
                                                         <img src="./assets/compiled/jpg/2.jpg" />
                                                     </div>
-                                                    <p class="font-bold ms-3 mb-0">Si Ganteng</p>
+                                                    <?php 
+                                                    $query_nama = mysqli_query($koneksi,"SELECT * FROM member WHERE id_member = '".$list_view['id_memberFK']."'" ); 
+                                                    $view_nama = mysqli_fetch_array($query_nama);
+                                                    ?>            
+                                                    <p class="font-bold ms-3 mb-0">  <?php echo $view_nama['nama']; ?> </p>
                                                 </div>
                                             </td>
                                             <td class="col-auto">
-                                                <span class="badge bg-warning">Saran</span>
+                                                <?php 
+                                                if ($list_view['kategori']=='Kritik'){
+                                                    echo "<span class='badge bg-danger'>".$list_view['kategori']."</span>";
+                                                }
+                                                else{
+                                                    echo "<span class='badge bg-warning'>".$list_view['kategori']."</span>";
+                                                }
+                                                
+                                                ?>
                                             </td>
                                             <td class="col-auto">
                                                 <p class="mb-0">
-                                                    Wow amazing design! Can you make another
-                                                    tutorial for this design?
+                                                    <?php echo $list_view['pesan'];?>
                                                 </p>
                                             </td>
                                         </tr>
+                                        <?php } ?>
+
+
                                     </tbody>
                                 </table>
                             </div>

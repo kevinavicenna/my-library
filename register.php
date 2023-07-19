@@ -56,13 +56,28 @@
                                     </div>
 
                                     <form action="conf/auth.php" method="POST">
-                                        <p><b> Please login to your Account</b></p>
+                                        <p>Register to your account </p>
 
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="username">Username</label>
                                             <input type="text" id="username" name="username" class="form-control" placeholder="Masukan Username" />
                                         </div>
 
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="password">Password</label>
+                                            <input type="password" id="password" name="password" class="form-control" placeholder="Masukan Password" />
+                                        </div>
+                                        
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="password">Password</label>
+                                            <input type="password" id="password" name="password" class="form-control" placeholder="Masukan Password" />
+                                        </div>
+                                        
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="password">Password</label>
+                                            <input type="password" id="password" name="password" class="form-control" placeholder="Masukan Password" />
+                                        </div>
+                                        
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="password">Password</label>
                                             <input type="password" id="password" name="password" class="form-control" placeholder="Masukan Password" />
