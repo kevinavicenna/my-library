@@ -8,9 +8,9 @@
               src="./assets/compiled/svg/error-404.svg"
               alt="Not Found"
             />
-            <h1 class="error-title">NOT FOUND</h1>
+            <h1 class="error-title">TIDAK DITEMUKAN</h1>
             <p class="fs-5 text-gray-600">
-              The page you are looking not found.
+             Halaman yang Anda cari tidak ditemukan.
             </p>
             <a href="index.php?page=dashboard" class="btn btn-lg btn-outline-primary mt-3"
               >Go Home</a

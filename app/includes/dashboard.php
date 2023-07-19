@@ -4,8 +4,7 @@
       <div class="col-12 col-md-6 order-md-1 order-last">
         <h3>Home</h3>
         <p class="text-subtitle text-muted">
-          A sortable, searchable, paginated table without dependencies
-          thanks to simple-datatables.
+        Selamat datang di UMS LIBRARY! Di sini, Anda akan menemukan informasi yang sangat berharga tentang seluruh aktivitas perpustakaan dalam satu tampilan.
         </p>
       </div>
       <div class="col-12 col-md-6 order-md-2 order-first">
@@ -28,18 +27,9 @@
             <!-- Banner -->
             <?php include('banner.php'); ?>
             <!-- End of Banner -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Profile Visit</h4>
-                        </div>
-                        <div class="card-body">
-                            <div id="chart-profile-visit"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Chart -->
+            <?php include('chart.php'); ?>
+            <!-- End Chart -->
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -105,6 +95,11 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
         <!-- <div class="col-12 col-lg-3">
             <div class="card">
                 <div class="card-body py-4 px-4">
@@ -166,6 +161,10 @@
                     <div id="chart-visitors-profile"></div>
                 </div>
             </div> -->
+        
+        
+        
+        
         </div>
     </section>
 </div>
