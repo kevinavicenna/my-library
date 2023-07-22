@@ -1,4 +1,4 @@
-<div class="modal fade" id="Update<?php echo $list_member['id_member']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+<div class="modal fade" id="Update<?php echo $list_krisar['id_krisar']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -8,32 +8,21 @@
                 </h5>
             </div>
 
-            <form method="GET" action="page-admin/member/member-update.php">
+            <form method="GET" action="page-member/krisar/krisar-update.php">
                 <div class="modal-body">
                     <div class="row">
                         <div class="form-group">
-                            <label for="basicInput">ID Member</label>
-                            <input type="text" class="form-control" name="id" id="basicInput" value="<?php echo $list_member['id_member']; ?>" placeholder="Masukkan ID Member" required />
+                            <label for="basicInput">Kategori</label>
+                            <select class=".choices form-select" name='kategori' required>
+                                <option value="">Pilih Kategori</option>
+                                <option value="Kritik" <?php if($list_krisar['kategori'] == 'Kritik' ){ echo "selected";} ?>>Kritik</option>
+                                <option value="Saran" <?php if($list_krisar['kategori'] == 'Saran' ){ echo "selected";} ?>>Saran</option>
+                            </select>
+                            <input type="text" class="form-control" name="id" id="basicInput" value="<?php echo $list_krisar['id_krisar']; ?>"required hidden/>
                         </div>
                         <div class="form-group">
-                            <label for="basicInput">Username</label>
-                            <input type="text" class="form-control" name="username" id="basicInput" value="<?php echo $list_member['username']; ?>" placeholder="Masukkan Username" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="basicInput">Password</label>
-                            <input type="password" class="form-control" name="password" id="basicInput" value="<?php echo $list_member['password']; ?>" placeholder="Masukkan Password" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="basicInput">Nama</label>
-                            <input type="text" class="form-control" name="nama" id="basicInput" value="<?php echo $list_member['nama']; ?>" placeholder="Masukkan Nama" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="basicInput">Alamat</label>
-                            <input type="text" class="form-control" name="alamat" id="basicInput" value="<?php echo $list_member['alamat']; ?>" placeholder="Masukkan Alamat" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="basicInput">Nomor HP</label>
-                            <input type="text" class="form-control" name="no_hp" id="basicInput" value="<?php echo $list_member['no_hp']; ?>" placeholder="Masukkan Nomor HP" required />
+                            <label for="basicInput">Pesan</label>
+                            <textarea class="form-control" name="pesan" id="pesan" placeholder="Masukkan Pesan" required ><?php echo $list_krisar['pesan']; ?></textarea>
                         </div>
                     </div>
                 </div>

@@ -11,20 +11,16 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="form-group">
-                            <label for="basicInput">ID Kritik & Saran</label>
-                            <input type="text" class="form-control" name="id" id="basicInput" placeholder="Masukkan ID Kritik & Saran" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="basicInput">ID Member</label>
-                            <input type="text" class="form-control" name="username" id="basicInput" placeholder="Masukkan ID Member" required />
-                        </div>
-                        <div class="form-group">
                             <label for="basicInput">Kategori</label>
-                            <input type="text" class="form-control" name="password" id="basicInput" placeholder="Masukkan Kategori" required />
+                            <select class=".choices form-select" name='kategori' required>
+                                <option value="">Pilih Kategori</option>
+                                <option value="Kritik">Kritik</option>
+                                <option value="Saran">Saran</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label for="basicInput">pesan</label>
-                            <textarea class="form-control" name="nama" id="basicInput" placeholder="Masukkan Pesan" required ></textarea>
+                            <label for="basicInput">Pesan</label>
+                            <textarea class="form-control" name="pesan" id="pesan" placeholder="Masukkan Pesan" required ></textarea>
                         </div>
                     </div>
                 </div>

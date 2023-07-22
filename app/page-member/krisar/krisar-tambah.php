@@ -1,12 +1,10 @@
 <?php
+    session_start();
     include('../../../conf/config.php');
-    $id       = $_GET['id'];
-    $username = $_GET['username'];
-    $password = $_GET['password'];
-    $nama     = $_GET['nama'];
-    $alamat   = $_GET['alamat'];
-    $no_hp    = $_GET['no_hp'];
+    $id_member = $_SESSION['id_member'];
+    $kategori  = $_GET['kategori'];
+    $pesan     = $_GET['pesan'];
 
-    $query = mysqli_query($koneksi, "INSERT INTO member VALUE('$id', '$username', '$password', '$nama', '$alamat', '$no_hp', 'member')");
-    header('Location:../../index.php?page=daftar-member');
+    $query = mysqli_query($koneksi, "INSERT INTO krisar (`id_memberFK`, `kategori`, `pesan`) VALUES ('$id_member', '$kategori', '$pesan')");
+    header('Location:../../index.php?page=kritik-saran');
 ?>
