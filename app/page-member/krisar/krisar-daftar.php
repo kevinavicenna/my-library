@@ -4,8 +4,7 @@
       <div class="col-12 col-md-6 order-md-1 order-last">
         <h3>Kritik dan Saran</h3>
         <p class="text-subtitle text-muted">
-          A sortable, searchable, paginated table without dependencies
-          thanks to simple-datatables.
+          Halaman ini menampilkan daftar kritik dan saran yang Anda berikan.
         </p>
       </div>
       <div class="col-12 col-md-6 order-md-2 order-first">
@@ -76,6 +75,10 @@
                   <a href="" class="btn icon btn-primary" data-bs-toggle="modal" data-bs-target="#Update<?php echo $list_krisar['id_krisar']; ?>"><i class="bi bi-pencil-square"></i></a>
                   <a href="" class="btn icon btn-danger" data-bs-toggle="modal" data-bs-target="#Hapus<?php echo $list_krisar['id_krisar']; ?>"><i class="bi bi-trash-fill"></i></a>
                 </td>
+                <?php 
+                  include ('modal-update.php');
+                  include ('modal-hapus.php');
+                ?>
               </tr>
             <?php
               } 

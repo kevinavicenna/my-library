@@ -4,8 +4,7 @@
       <div class="col-12 col-md-6 order-md-1 order-last">
         <h3>Daftar Member</h3>
         <p class="text-subtitle text-muted">
-          A sortable, searchable, paginated table without dependencies
-          thanks to simple-datatables.
+          Halaman ini menampilkan daftar member yang terdaftar di dalam sistem perpustakaan. 
         </p>
       </div>
       <div class="col-12 col-md-6 order-md-2 order-first">

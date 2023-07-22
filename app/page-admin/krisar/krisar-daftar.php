@@ -4,8 +4,7 @@
       <div class="col-12 col-md-6 order-md-1 order-last">
         <h3>Kritik dan Saran</h3>
         <p class="text-subtitle text-muted">
-          A sortable, searchable, paginated table without dependencies
-          thanks to simple-datatables.
+          Halaman ini menampilkan daftar kritik dan saran yang diberikan oleh member.
         </p>
       </div>
       <div class="col-12 col-md-6 order-md-2 order-first">

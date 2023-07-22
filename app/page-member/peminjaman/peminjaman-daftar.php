@@ -4,8 +4,7 @@
       <div class="col-12 col-md-6 order-md-1 order-last">
         <h3>Peminjaman</h3>
         <p class="text-subtitle text-muted">
-          A sortable, searchable, paginated table without dependencies
-          thanks to simple-datatables.
+          Halaman ini menampilkan daftar riwayat peminjaman Anda.
         </p>
       </div>
       <div class="col-12 col-md-6 order-md-2 order-first">
@@ -64,7 +63,14 @@
                   <?php echo $list_pinjam['tgl_jatuh_tempo']; ?>
                 </td>
                 <td  width="10%">
-                <span class="badge bg-info">Dipinjam</span>
+                  <?php
+                        $query3 = mysqli_query($koneksi, "SELECT * FROM pengembalian WHERE id_peminjamanFK='".$list_pinjam['id_peminjaman']."'");
+                        if (mysqli_num_rows($query3) == 1) {
+                            echo "<span class='badge bg-success'>Dikembalikan</span>";
+                        } else {
+                          echo "<span class='badge bg-info'>Dipinjam</span>";
+                        }
+                    ?>
                 </td>
               </tr>
             <?php
