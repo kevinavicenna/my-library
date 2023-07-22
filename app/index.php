@@ -28,10 +28,17 @@
         <!-- Main Content --> 
         <div id="main-content">
           <?php
+
                 if($_SESSION['status']=='administrator'){
                   if (ISSET($_GET['page'])){
                     if ($_GET['page'] == 'dashboard'){
                       include('includes/dashboard.php');
+                    }else if($_GET['page'] == 'katalog-buku'){
+                      include('page-buku/katalog-buku.php'); 
+                    }else if($_GET['page'] == 'katalog-filter'){
+                      include('page-buku//katalog-filter.php'); 
+                    }else if($_GET['page'] == 'katalog-cari'){
+                      include('page-buku//katalog-cari.php'); 
                     }else if($_GET['page'] == 'daftar-buku'){
                       include('page-admin/buku/buku-daftar.php'); 
                     }else if($_GET['page'] == 'daftar-kategori'){
@@ -55,7 +62,11 @@
                     if ($_GET['page'] == 'dashboard'){
                       include('includes/dashboard.php');
                     }else if($_GET['page'] == 'katalog-buku'){
-                      include('page-member/katalog-buku.php'); 
+                      include('page-buku//katalog-buku.php'); 
+                    }else if($_GET['page'] == 'katalog-filter'){
+                      include('page-buku//katalog-filter.php'); 
+                    }else if($_GET['page'] == 'katalog-cari'){
+                      include('page-buku//katalog-cari.php'); 
                     }else if($_GET['page'] == 'peminjaman'){
                       include('page-member/peminjaman/peminjaman-daftar.php'); 
                     }else if($_GET['page'] == 'kritik-saran'){
