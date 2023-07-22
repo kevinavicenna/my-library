@@ -6,7 +6,7 @@ $view = mysqli_fetch_array($query)
     <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Profile Visit</h4>
+                            <h4>Trend Pendaftaran Member Bulanan</h4>
                         </div>
                         <div class="card-body">
                             <div id="chart-profile-visit"> <?php echo $view['jumlah_buku']; ?> </div>

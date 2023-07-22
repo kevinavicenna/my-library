@@ -4,7 +4,7 @@
       <div class="col-12 col-md-6 order-md-1 order-last">
         <h3>Home</h3>
         <p class="text-subtitle text-muted">
-        Selamat datang di UMS LIBRARY! Di sini, Anda akan menemukan informasi yang sangat berharga tentang seluruh aktivitas perpustakaan dalam satu tampilan.
+            Selamat datang di UMS LIBRARY! Di sini, Anda akan menemukan informasi yang sangat berharga tentang seluruh aktivitas perpustakaan dalam satu tampilan.
         </p>
       </div>
       <div class="col-12 col-md-6 order-md-2 order-first">
@@ -41,7 +41,8 @@
                                 <table class="table table-hover table-lg">
                                     <thead>
                                         <tr>
-                                            <th>Nama</th>
+                                            <th>No</th>
+                                            <th>ID</th>
                                             <th>Kategori</th>
                                             <th>Pesan</th>
                                         </tr>
@@ -49,25 +50,27 @@
 
                                     <tbody>   
                                     <?php 
-                                        $query = mysqli_query($koneksi, "SELECT * from krisar");
-                                        
+                                        $query = mysqli_query($koneksi, "SELECT * from krisar ORDER BY id_krisar DESC");
+                                        $no    = 0;
                                         while ($list_view = mysqli_fetch_array($query)){
+                                        $no++;
+                                        if ($no > 3){
+                                            break;
+                                        }
                                     ?>
 
                                         <tr>
-                                            <td class="col-3">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar avatar-md">
-                                                        <img src="./assets/compiled/jpg/2.jpg" />
-                                                    </div>
-                                                    <?php 
-                                                    $query_nama = mysqli_query($koneksi,"SELECT * FROM member WHERE id_member = '".$list_view['id_memberFK']."'" ); 
-                                                    $view_nama = mysqli_fetch_array($query_nama);
-                                                    ?>            
-                                                    <p class="font-bold ms-3 mb-0">  <?php echo $view_nama['nama']; ?> </p>
+                                            <td class="col-1">
+                                                <div class="d-flex align-items-center">           
+                                                    <p class="font-bold ms-3 mb-0">  <?php echo $no ?> </p>
                                                 </div>
                                             </td>
                                             <td class="col-auto">
+                                                <div class="d-flex align-items-center">           
+                                                    <p class="font-bold ms-3 mb-0">  <?php echo $list_view['id_krisar']; ?> </p>
+                                                </div>
+                                            </td>
+                                            <td>
                                                 <?php 
                                                 if ($list_view['kategori']=='Kritik'){
                                                     echo "<span class='badge bg-danger'>".$list_view['kategori']."</span>";

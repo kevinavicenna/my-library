@@ -8,6 +8,7 @@
               src="./assets/compiled/svg/error-404.svg"
               alt="Not Found"
             />
+            <br><br>
             <h1 class="error-title">TIDAK DITEMUKAN</h1>
             <p class="fs-5 text-gray-600">
              Halaman yang Anda cari tidak ditemukan.
