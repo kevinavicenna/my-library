@@ -26,6 +26,12 @@
   </div>
   <section id="content-types">
     <div class="row">
+        <div class="col-md-3">
+          <form action="index.php?page=katalog-cari" method="POST" class="d-flex align-items-center">
+            <input type="text" name="cari" class="form-control me-2" placeholder="Cari judul buku...">
+            <button type="submit" class="btn btn-primary">Cari</button>
+          </form>
+        </div>
         <div class="col-md-1">
           <button class="btn btn-primary dropdown-toggle me-1" type="button" id="dropdownKategori"
             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,17 +43,10 @@
               while ($list_kategori = mysqli_fetch_array($query_kategori)){
             ?>
               <a class="dropdown-item" href="index.php?page=katalog-filter&id=<?php echo $list_kategori['id_kategori'] ?>")"><?php echo $list_kategori['nama_kategori'] ?></a>
-            <?php } ?>
-            
+            <?php } ?>   
           </div>
         </div>
         <div class="col">
-        </div>
-        <div class="col-md-3">
-          <form action="index.php?page=katalog-cari" method="POST" class="d-flex align-items-center">
-            <input type="text" name="cari" class="form-control me-2" placeholder="Cari judul buku...">
-            <button type="submit" class="btn btn-primary">Cari</button>
-          </form>
         </div>
     </div><br>
     <div class="row match-height">
@@ -57,11 +56,11 @@
       while ($katalog = mysqli_fetch_array($query)) {
         ?>
         <div class="col-md-3 d-flex align-items-stretch">
-          <div class="card">
+          <div class="card" style="width: 290px;">
             <div class="card-content">
               <div class="card-body">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#View<?php echo $katalog['id_buku']; ?>">
-                    <img class="card-img" style="height: 20rem;" src="assets/compiled/jpg/buku/<?php echo $katalog['cover']; ?>" alt="Card image cap" />
+                    <img class="card-img" style="height: 20rem; width: 15rem;" src="assets/compiled/jpg/buku/<?php echo $katalog['cover']; ?>" alt="Card image cap" />
                 </a>
               </div>
               <div class="card-body">
