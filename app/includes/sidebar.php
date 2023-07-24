@@ -8,7 +8,7 @@
                     src="./assets/compiled/svg/ums-library.svg"
                     alt="Logo"
                     srcset=""
-                    height="50px"
+                    style="height: 25px;"
                 /></a>
               </div>
               <div class="theme-toggle d-flex gap-2 align-items-center mt-2">

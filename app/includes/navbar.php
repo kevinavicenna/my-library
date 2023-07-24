@@ -80,7 +80,13 @@
                         </div>
                         <div class="user-img d-flex align-items-center">
                             <div class="avatar avatar-md">
-                                <img src="./assets/compiled/jpg/1.jpg" />
+                                <?php
+                                    if($_SESSION['status'] == 'administrator'){
+                                        echo "<img src='./assets/compiled/jpg/1.jpg' />";
+                                    }else{
+                                        echo "<img src='./assets/compiled/jpg/4.jpg' />";
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -89,10 +95,6 @@
                     style="min-width: 11rem">
                     <li>
                         <h6 class="dropdown-header">Hello, <?php echo $_SESSION['nama'];?></h6>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"><i class="icon-mid bi bi-person me-2"></i> My
-                            Profile</a>
                     </li>
                     <li>
                         <hr class="dropdown-divider" />
