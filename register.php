@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Login</title>
+    <title>Daftar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/lg_admin.css">
@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="app/assets/compiled/css/app.css" />
 
     <!-- Sweet Alert -->
     <link rel="stylesheet" href="app/assets/extensions/sweetalert2/sweetalert2.min.css"/>
@@ -56,8 +57,8 @@
                                         <h4 class="mt-1 mb-5 pb-1">UMS LIBRARY PAGE</h4>
                                     </div>
 
-                                    <form action="conf/auth.php" method="POST">
-                                        <p><b>Silahkan masuk untuk melanjutkan</b></p>
+                                    <form action="conf/register.php" method="POST">
+                                        <p><b>Silahkan daftar untuk menjadi anggota</b></p>
 
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="username">Username</label>
@@ -66,15 +67,30 @@
 
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="password">Password</label>
-                                            <input type="password" id="password" name="password" class="form-control" placeholder="Masukan Password" />
+                                            <input type="password" name="password" class="form-control" placeholder="Masukan Password" />
+                                        </div>
+                                        
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="password">Nama</label>
+                                            <input type="text" name="nama" class="form-control" placeholder="Masukan Nama" />
+                                        </div>
+                                        
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="password">Alamat</label>
+                                            <input type="text"  name="alamat" class="form-control" placeholder="Masukan Alamat" />
+                                        </div>
+                                        
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="password">Nomor HP</label>
+                                            <input type="text"  name="no_hp" class="form-control" placeholder="Masukan Nomor HP" />
                                         </div>
 
                                         <div class="text-center pt-1 mb-5 pb-1">
-                                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" name="submit" value="Login">Login</button>
+                                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" name="submit" value="Daftar">Daftar</button>
                                         </div>
                                         <div class="text-center pt-1 mb-5 pb-1">
-                                            <p>Belum punya akun?</p>
-                                            <b><a href="register.php">Daftar</a></b>
+                                            <p>Sudah punya akun?</p>
+                                            <b><a href="index.php">Login</a></b>
                                         </div>
                                     </form>
 
@@ -100,14 +116,14 @@
     <script src="app/assets/static/js/pages/sweetalert2.js"></script>
 </body>
 <?php
-if (ISSET($_GET['error'])) {
+if (isset($_GET['error'])) {
     $x = ($_GET['error']);
     if ($x == 1) {
         echo "
         <script>
             Toast.fire({
                 icon: 'error',
-                title: 'Akun tidak ditemukan'
+                title: 'Mohon lengkapi semua kolom yang diperlukan'
             })
         </script>";
     } else if ($x == 2) {
@@ -115,20 +131,12 @@ if (ISSET($_GET['error'])) {
         <script>
             Toast.fire({
                 icon: 'error',
-                title: 'Silahkan masukkan username dan password'
-            })
-        </script>";   
-    } else {
-        echo '';
-    }
-}else if(ISSET($_GET['register'])){
-    echo "
-        <script>
-            Toast.fire({
-                icon: 'success',
-                title: 'Pendaftaran berhasil! Silahkan masuk'
+                title: 'Username telah digunakan'
             })
         </script>";
+    } else{
+        echo '';
+    }
 }
 ?>
 
