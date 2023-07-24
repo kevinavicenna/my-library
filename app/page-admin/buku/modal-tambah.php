@@ -11,10 +11,6 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="form-group">
-                            <label for="basicInput">ID Buku</label>
-                            <input type="text" class="form-control" name="id" id="basicInput" placeholder="Masukkan ID Buku" required />
-                        </div>
-                        <div class="form-group">
                             <label for="basicInput">Judul</label>
                             <input type="text" class="form-control" name="judul" id="basicInput" placeholder="Masukkan Judul" required />
                         </div>

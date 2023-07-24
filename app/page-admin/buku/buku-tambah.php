@@ -15,6 +15,6 @@
     $file_tmp = $_FILES['cover']['tmp_name'];
     move_uploaded_file($file_tmp, '../../assets/compiled/jpg/buku/' .$cover);
     
-    $query = mysqli_query($koneksi, "INSERT INTO buku VALUE('$id', '$cover', '$judul', '$penulis', '$penerbit', '$kategori', '$isbn', '$jumlah', '$rak', '$tgl_tambah')");
-    header('Location:../../index.php?page=daftar-buku');
+    $query = mysqli_query($koneksi, "INSERT INTO `buku`(`cover`, `judul`, `penulis`, `penerbit`, `id_kategoriFK`, `isbn`, `jumlah`, `rak`, `tgl_tambah`) VALUES ('$cover','$judul','$penulis','$penerbit','$kategori','$isbn','$jumlah','$rak','$tgl_tambah')");
+    header('Location:../../index.php?page=daftar-buku&set-buku=1');
 ?>

@@ -15,5 +15,5 @@
      move_uploaded_file($file_tmp, '../../assets/compiled/jpg/buku/' .$cover);
 
     $query = mysqli_query($koneksi, "UPDATE buku SET judul='$judul', penulis='$penulis', penerbit='$penerbit', id_kategoriFK='$kategori', isbn='$isbn', jumlah='$jumlah', rak='$rak', cover='$cover' WHERE id_buku = '$id'");
-    header('Location:../../index.php?page=daftar-buku');
+    header('Location:../../index.php?page=daftar-buku&set-buku=2');
 ?>
