@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                 Apakah Anda yakin ingin menghapus data ini?
-                <p><?php echo $list_member['id_member']; ?> - <?php echo $list_member['username']; ?></p>
+                <p><?php echo $list_member['id_member']; ?> - <?php echo $list_member['nama']; ?></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">

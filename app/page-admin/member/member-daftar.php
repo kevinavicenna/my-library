@@ -73,7 +73,7 @@
                   <?php echo $list_member['no_hp']; ?>
                 </td>
                 <td>
-                  <?php echo $list_member['tgl_pendaftaran']; ?>
+                  <?php echo date('d-m-Y', strtotime($list_member['tgl_pendaftaran'])); ?>
                 </td>
                 <td>
                 <span class="badge bg-info"><?php echo $list_member['status']; ?></span>

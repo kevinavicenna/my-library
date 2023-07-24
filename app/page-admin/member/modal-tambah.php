@@ -11,10 +11,6 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="form-group">
-                            <label for="basicInput">ID Member</label>
-                            <input type="text" class="form-control" name="id" id="basicInput" placeholder="Masukkan ID Member" required />
-                        </div>
-                        <div class="form-group">
                             <label for="basicInput">Username</label>
                             <input type="text" class="form-control" name="username" id="basicInput" placeholder="Masukkan Username" required />
                         </div>
@@ -33,6 +29,10 @@
                         <div class="form-group">
                             <label for="basicInput">Nomor HP</label>
                             <input type="text" class="form-control" name="no_hp" id="basicInput" placeholder="Masukkan Nomor HP" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="basicInput">Tanggal Pendaftaran</label>
+                            <input type="date" name="tgl_daftar" class="form-control mb-3 flatpickr-no-config" placeholder="Masukkan Tanggal Pendaftaran."/>
                         </div>
                     </div>
                 </div>

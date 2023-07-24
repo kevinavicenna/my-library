@@ -12,11 +12,8 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="form-group">
-                            <label for="basicInput">ID Member</label>
-                            <input type="text" class="form-control" name="id" id="basicInput" value="<?php echo $list_member['id_member']; ?>" placeholder="Masukkan ID Member" required />
-                        </div>
-                        <div class="form-group">
                             <label for="basicInput">Username</label>
+                            <input type="text" class="form-control" name="id" id="basicInput" value="<?php echo $list_member['id_member']; ?>" hidden required />
                             <input type="text" class="form-control" name="username" id="basicInput" value="<?php echo $list_member['username']; ?>" placeholder="Masukkan Username" required />
                         </div>
                         <div class="form-group">
