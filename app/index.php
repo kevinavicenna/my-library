@@ -32,7 +32,7 @@
                 if($_SESSION['status']=='administrator'){
                   if (ISSET($_GET['page'])){
                     if ($_GET['page'] == 'dashboard'){
-                      include('includes/dashboard.php');
+                      include('includes/dashboard-admin.php');
                     }else if($_GET['page'] == 'katalog-buku'){
                       include('page-buku/katalog-buku.php'); 
                     }else if($_GET['page'] == 'katalog-filter'){
@@ -55,12 +55,12 @@
                       include('includes/404.php');
                     } 
                   }else{
-                    include('includes/dashboard.php');
+                    include('includes/dashboard-admin.php');
                   }
                 }else if($_SESSION['status']=='member'){
                   if (ISSET($_GET['page'])){
                     if ($_GET['page'] == 'dashboard'){
-                      include('includes/dashboard.php');
+                      include('includes/dashboard-member.php');
                     }else if($_GET['page'] == 'katalog-buku'){
                       include('page-buku//katalog-buku.php'); 
                     }else if($_GET['page'] == 'katalog-filter'){
@@ -75,12 +75,11 @@
                       include('includes/404.php');
                     }
                   }else{
-                    include('includes/dashboard.php');
+                    include('includes/dashboard-member.php');
                   }
                 }
             ?>
-        </div>
-          
+        </div>          
         <!-- End of Main Content -->
 
         <!-- Footer -->
@@ -93,4 +92,13 @@
     <!-- End of Scripts -->
 
   </body>
-</html>
+  <!-- Toast -->
+    <?php include('includes/toast.php'); ?>
+  <!-- End of Toast -->
+
+  <!-- Chart Admin n Member -->
+    <?php include('includes/chart-js.php'); ?>
+  <!-- End of Chart -->
+  </html>
+
+
