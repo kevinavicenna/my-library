@@ -49,7 +49,7 @@
           <tbody>
             <?php
             $no = 0;
-            $query = mysqli_query($koneksi, "SELECT peminjaman.id_peminjaman, buku.judul, member.nama, peminjaman.tgl_pinjam, peminjaman.tgl_jatuh_tempo FROM ((peminjaman INNER JOIN buku ON peminjaman.id_bukuFK = buku.id_buku) INNER JOIN member ON peminjaman.id_memberFK = member.id_member)");
+            $query = mysqli_query($koneksi, "SELECT peminjaman.id_peminjaman, buku.judul, member.nama, peminjaman.tgl_pinjam, peminjaman.tgl_jatuh_tempo, peminjaman.status FROM ((peminjaman INNER JOIN buku ON peminjaman.id_bukuFK = buku.id_buku) INNER JOIN member ON peminjaman.id_memberFK = member.id_member)");
             while ($list_pinjam = mysqli_fetch_array($query)) {
               $no++
                 ?>
@@ -74,11 +74,10 @@
                 </td>
                 <td  width="5%">
                   <?php
-                      $query3 = mysqli_query($koneksi, "SELECT * FROM pengembalian WHERE id_peminjamanFK='".$list_pinjam['id_peminjaman']."'");
-                      if (mysqli_num_rows($query3) == 1) {
-                          echo "<span class='badge bg-success'>Dikembalikan</span>";
+                      if ($list_pinjam['status'] == 'Dipinjam') {
+                        echo "<span class='badge bg-info'>".$list_pinjam['status']."</span>";   
                       } else {
-                        echo "<span class='badge bg-info'>Dipinjam</span>";
+                        echo "<span class='badge bg-success'>".$list_pinjam['status']."</span>";
                       }
                     ?>
                     <!-- <span class="badge bg-info">Dipinjam</span> -->

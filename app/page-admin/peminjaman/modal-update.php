@@ -16,11 +16,8 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="form-group">
-                            <label for="basicInput">ID Peminjaman</label>
-                            <input type="text" class="form-control" name="id" id="basicInput" value="<?php echo $view['id_peminjaman']; ?>" placeholder="Masukkan ID Peminjaman" required />
-                        </div>
-                        <div class="form-group">
                             <label for="basicInput">ID Buku</label>
+                            <input type="text" class="form-control" name="id" id="basicInput" value="<?php echo $view['id_peminjaman']; ?>" hidden required />
                             <input type="text" class="form-control" name="id_buku" id="basicInput" value="<?php echo $view['id_bukuFK']; ?>" placeholder="Masukkan ID Buku" required />
                         </div>
                         <div class="form-group">

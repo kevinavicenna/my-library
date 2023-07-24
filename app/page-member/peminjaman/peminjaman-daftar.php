@@ -33,13 +33,14 @@
               <th>Nama Peminjam</th>
               <th>Tanggal Peminjaman</th>
               <th>Tanggal Jatuh Tempo</th>
+              <th>Tanggal Pengembalian</th>
               <th>Status</th>
             </tr>
           </thead>
           <tbody>
             <?php
             $no = 0;
-            $query = mysqli_query($koneksi, "SELECT peminjaman.id_peminjaman, buku.judul, member.nama, peminjaman.tgl_pinjam, peminjaman.tgl_jatuh_tempo FROM ((peminjaman INNER JOIN buku ON peminjaman.id_bukuFK = buku.id_buku) INNER JOIN member ON peminjaman.id_memberFK = member.id_member) WHERE id_memberFK='".$_SESSION['id_member']."'");
+            $query = mysqli_query($koneksi, "SELECT peminjaman.id_peminjaman, buku.judul, member.nama, peminjaman.tgl_pinjam, peminjaman.tgl_jatuh_tempo, peminjaman.tgl_kembali FROM ((peminjaman INNER JOIN buku ON peminjaman.id_bukuFK = buku.id_buku) INNER JOIN member ON peminjaman.id_memberFK = member.id_member) WHERE id_memberFK='".$_SESSION['id_member']."'");
             while ($list_pinjam = mysqli_fetch_array($query)) {
               $no++
                 ?>
@@ -57,10 +58,19 @@
                   <?php echo $list_pinjam['nama']; ?>
                 </td>
                 <td>
-                  <?php echo $list_pinjam['tgl_pinjam']; ?>
+                  <?php echo date('d-m-Y', strtotime($list_pinjam['tgl_pinjam'])); ?>
                 </td>
                 <td>
-                  <?php echo $list_pinjam['tgl_jatuh_tempo']; ?>
+                  <?php echo date('d-m-Y', strtotime($list_pinjam['tgl_jatuh_tempo'])); ?>
+                </td>
+                <td>
+                  <?php
+                    if (!empty($list_pinjam['tgl_kembali'])) {
+                        echo date('d-m-Y', strtotime($list_pinjam['tgl_kembali']));
+                    } else {
+                        echo " ";
+                    }
+                  ?>
                 </td>
                 <td  width="10%">
                   <?php
