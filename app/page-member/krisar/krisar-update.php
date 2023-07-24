@@ -5,5 +5,5 @@
     $pesan     = $_GET['pesan'];
 
     $query = mysqli_query($koneksi, "UPDATE krisar SET kategori='$kategori', pesan='$pesan' WHERE id_krisar = '$id'");
-    header('Location:../../index.php?page=kritik-saran');
+    header('Location:../../index.php?page=kritik-saran&set-krisar=2');
 ?>

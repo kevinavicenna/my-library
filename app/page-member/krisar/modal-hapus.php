@@ -16,7 +16,7 @@
                     <i class="bx bx-x d-block d-sm-none"></i>
                     <span class="d-none d-sm-block">Batal</span>
                 </button>
-                <a href="page-member/krisar/krisar-hapus.php?id=<?php echo $list_krisar['id_krisar']; ?>" class="btn btn-danger">Benar</a>
+                <a href="page-member/krisar/krisar-hapus.php?id=<?php echo $list_krisar['id_krisar']; ?>" class="btn btn-danger">Ya</a>
             </div>
         </div>
     </div>

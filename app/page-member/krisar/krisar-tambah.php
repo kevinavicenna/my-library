@@ -6,5 +6,5 @@
     $pesan     = $_GET['pesan'];
 
     $query = mysqli_query($koneksi, "INSERT INTO krisar (`id_memberFK`, `kategori`, `pesan`) VALUES ('$id_member', '$kategori', '$pesan')");
-    header('Location:../../index.php?page=kritik-saran');
+    header('Location:../../index.php?page=kritik-saran&set-krisar=1');
 ?>
