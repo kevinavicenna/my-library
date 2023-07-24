@@ -11,20 +11,8 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="form-group">
-                            <label for="basicInput">ID Pengembalian</label>
-                            <input type="text" class="form-control" name="id" id="basicInput" placeholder="Masukkan ID Pengembalian" required />
-                        </div>
-                        <div class="form-group">
                             <label for="basicInput">ID Peminjaman</label>
                             <input type="text" class="form-control" name="id_peminjaman" id="basicInput" placeholder="Masukkan ID Peminjaman" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="basicInput">ID Buku</label>
-                            <input type="text" class="form-control" name="id_buku" id="basicInput" placeholder="Masukkan ID Buku" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="basicInput">ID Member</label>
-                            <input type="text" class="form-control" name="id_member" id="basicInput" placeholder="Masukkan ID Member" required />
                         </div>
                         <div class="form-group">
                             <label for="basicInput">Tanggal Pengembalian</label>

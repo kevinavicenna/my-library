@@ -50,8 +50,8 @@
           <tbody>
             <?php
             $no = 0;
-            $query = mysqli_query($koneksi, "SELECT pengembalian.id_pengembalian, buku.judul, member.nama, peminjaman.tgl_pinjam, peminjaman.tgl_jatuh_tempo, pengembalian.tgl_kembali FROM (((pengembalian INNER JOIN buku ON pengembalian.id_bukuFK = buku.id_buku) INNER JOIN member ON pengembalian.id_memberFK = member.id_member) INNER JOIN peminjaman ON pengembalian.id_peminjamanFK = peminjaman.id_peminjaman)");
-            while ($list_kembali = mysqli_fetch_array($query)) {
+            $query = mysqli_query($koneksi, "SELECT peminjaman.id_peminjaman, buku.judul, member.nama, peminjaman.tgl_pinjam, peminjaman.tgl_jatuh_tempo, peminjaman.tgl_kembali, peminjaman.status FROM ((peminjaman INNER JOIN buku ON peminjaman.id_bukuFK = buku.id_buku) INNER JOIN member ON peminjaman.id_memberFK = member.id_member) WHERE peminjaman.status = 'Dikembalikan'");
+            while ($list_pinjam = mysqli_fetch_array($query)) {
               $no++
                 ?>
               <tr>
@@ -59,49 +59,41 @@
                   <?php echo $no; ?>
                 </td>
                 <td>
-                  <?php echo $list_kembali['id_pengembalian']; ?>
+                  <?php echo $list_pinjam['id_peminjaman']; ?>
                 </td>
                 <td>
-                  <?php echo $list_kembali['judul']; ?>
+                  <?php echo $list_pinjam['judul']; ?>
                 </td>
                 <td>
-                  <?php echo $list_kembali['nama']; ?>
+                  <?php echo $list_pinjam['nama']; ?>
                 </td>
                 <td>
-                  <?php echo date('d-m-Y', strtotime($list_kembali['tgl_pinjam'])); ?>
+                  <?php echo date('d-m-Y', strtotime($list_pinjam['tgl_pinjam'])); ?>
                 </td>
                 <td>
-                  <?php echo date('d-m-Y', strtotime($list_kembali['tgl_jatuh_tempo'])); ?>
+                  <?php echo date('d-m-Y', strtotime($list_pinjam['tgl_jatuh_tempo'])); ?>
                 </td>
                 <td>
-                  <?php echo date('d-m-Y', strtotime($list_kembali['tgl_kembali'])); ?>
+                  <?php echo date('d-m-Y', strtotime($list_pinjam['tgl_kembali'])); ?>
                 </td>
                 <td>
                   <?php
-                    $query2 = mysqli_query($koneksi, "SELECT * FROM peminjaman");
-                    $view = mysqli_fetch_array($query2);
-                    $query3 = mysqli_query($koneksi, "SELECT * FROM pengembalian WHERE id_peminjamanFK='".$view['id_peminjaman']."'");
-                    if (mysqli_num_rows($query3)==1){
-                      if ($list_kembali['tgl_kembali'] <= $list_kembali['tgl_jatuh_tempo']){
-                        echo "<span class='badge bg-success'>Dikembalikan</span>";
-                      }else if ($list_kembali['tgl_kembali'] > $list_kembali['tgl_jatuh_tempo']){
+                      if ($list_pinjam['tgl_kembali'] <= $list_pinjam['tgl_jatuh_tempo']){
+                        echo "<span class='badge bg-success'>Tepat Waktu</span>";
+                      }else if ($list_pinjam['tgl_kembali'] > $list_pinjam['tgl_jatuh_tempo']){
                         echo "<span class='badge bg-danger'>Terlambat</span>";
                       }else {
                         echo "<span class='badge bg-info'>Dipinjam</span>";
                       }
-                    }
                   ?>
                  <!-- <span class="badge bg-success">Dikembalikan</span> -->
                 </td>
                 <td width="15%">
                   <!-- <span class="badge bg-success">X</span> -->
-                  <a href="" class="btn icon btn-primary" data-bs-toggle="modal" data-bs-target="#Update<?php echo $list_kembali['id_pengembalian']; ?>"><i class="bi bi-pencil-square"></i></a>
-                  <a href="" class="btn icon btn-danger" data-bs-toggle="modal" data-bs-target="#Hapus<?php echo $list_kembali['id_pengembalian']; ?>"><i class="bi bi-trash-fill"></i></a>
-                </td>
+                  <a href="" class="btn icon btn-primary" data-bs-toggle="modal" data-bs-target="#Update<?php echo $list_pinjam['id_peminjaman']; ?>"><i class="bi bi-pencil-square"></i></a>
               </tr>
             <?php
               include('modal-update.php');
-              include('modal-hapus.php');
               } 
             ?>
           </tbody>
