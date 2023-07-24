@@ -50,5 +50,11 @@
       rel="stylesheet"
       href="assets/extensions/flatpickr/flatpickr.min.css"
     />
+
+    <!-- Sweet Alert -->
+    <link
+      rel="stylesheet"
+      href="assets/extensions/sweetalert2/sweetalert2.min.css"
+    />
     
   </head>
