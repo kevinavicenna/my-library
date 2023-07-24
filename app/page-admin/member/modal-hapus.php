@@ -16,7 +16,7 @@
                     <i class="bx bx-x d-block d-sm-none"></i>
                     <span class="d-none d-sm-block">Batal</span>
                 </button>
-                <a href="page-admin/member/member-hapus.php?id=<?php echo $list_member['id_member']; ?>" class="btn btn-danger">Benar</a>
+                <a href="page-admin/member/member-hapus.php?id=<?php echo $list_member['id_member']; ?>" class="btn btn-danger">Ya</a>
             </div>
         </div>
     </div>
