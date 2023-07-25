@@ -46,7 +46,19 @@
                         </div>
                         <div class="form-group">
                             <label for="basicInput">Nomor Rak</label>
-                            <input type="text" class="form-control" name="rak" id="basicInput" placeholder="Masukkan Nomor Rak" required />
+                            <select class="choices form-select" name="rak" required>
+                                <option value="">Pilih Nomor Rak</option>
+                                <option value="1">Rak 1  - Agama dan Filsafat</option>
+                                <option value="2">Rak 2  - Bahasa dan Sastra</option>
+                                <option value="3">Rak 3  - Teknologi dan Komputer</option>
+                                <option value="4">Rak 4  - Fiksi dan Non Fiksi Anak - Remaja</option>
+                                <option value="5">Rak 5  - Fiksi dan Non Fiksi Dewasa</option>
+                                <option value="6">Rak 6  - Pendidikan dan Pengembangan Diri</option>
+                                <option value="7">Rak 7  - Sejarah dan Referensi</option>
+                                <option value="8">Rak 8  - Psikologi dan Ilmu Sosial</option>
+                                <option value="9">Rak 9  - Kesehatan dan Medis</option>
+                                <option value="10">Rak 10 - Bisnis dan Ekonomi</option>   
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="basicInput">Tanggal Ditambahkan</label>

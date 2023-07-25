@@ -50,7 +50,19 @@
                         </div>
                         <div class="form-group">
                             <label for="basicInput">Nomor Rak</label>
-                            <input type="text" class="form-control" name="rak" id="basicInput" value="<?php echo $list_buku['rak']; ?>" placeholder="Masukkan Nomor Rak" required />
+                            <select class=".choices form-select" name="rak" required>
+                                <option value="">Pilih Nomor Rak</option>
+                                <option value="1" <?php if($list_buku['rak'] == '1' ){ echo "selected";} ?>>Rak 1  - Agama dan Filsafat</option>
+                                <option value="2" <?php if($list_buku['rak'] == '2' ){ echo "selected";} ?>>Rak 2  - Bahasa dan Sastra</option>
+                                <option value="3" <?php if($list_buku['rak'] == '3' ){ echo "selected";} ?>>Rak 3  - Teknologi dan Komputer</option>
+                                <option value="4" <?php if($list_buku['rak'] == '4' ){ echo "selected";} ?>>Rak 4  - Fiksi dan Non Fiksi Anak - Remaja</option>
+                                <option value="5" <?php if($list_buku['rak'] == '5' ){ echo "selected";} ?>>Rak 5  - Fiksi dan Non Fiksi Dewasa</option>
+                                <option value="6" <?php if($list_buku['rak'] == '6' ){ echo "selected";} ?>>Rak 6  - Pendidikan dan Pengembangan Diri</option>
+                                <option value="7" <?php if($list_buku['rak'] == '7' ){ echo "selected";} ?>>Rak 7  - Sejarah dan Referensi</option>
+                                <option value="8" <?php if($list_buku['rak'] == '8' ){ echo "selected";} ?>>Rak 8  - Psikologi dan Ilmu Sosial</option>
+                                <option value="9" <?php if($list_buku['rak'] == '9' ){ echo "selected";} ?>>Rak 9  - Kesehatan dan Medis</option>
+                                <option value="10" <?php if($list_buku['rak'] == '10' ){ echo "selected";} ?>>Rak 10 - Bisnis dan Ekonomi</option>   
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="basicInput">Upload Cover</label>
