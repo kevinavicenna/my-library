@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2023 at 02:59 PM
+-- Generation Time: Jul 25, 2023 at 03:10 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -279,12 +279,12 @@ INSERT INTO `member` (`id_member`, `username`, `password`, `nama`, `alamat`, `no
 ('M0001', 'andreWJY', '12345', 'Andre Wijaya', 'Kartasura', '6285672347549', '2023-05-03', 'member'),
 ('M0002', 'mayaPTW', 'maya4545', 'Maya Pratiwi', 'Mojosongo', '6289477882369', '2023-05-03', 'member'),
 ('M0003', 'imdmstf', 'must100', 'M I Mustofa ', 'Kendal', '6287755432761', '2023-05-05', 'member'),
-('M0004', 'ivanda.ilham', 'ivanda2006', 'Ivanda Ilham', 'Sukoharjo', '6281632479865', '2023-06-03', 'member'),
+('M0004', 'ivanda.ilham', 'ivanda2006', 'Ivanda Ilham', 'Sukoharjo', '6281632479865', '2023-05-20', 'member'),
 ('M0005', 'kevinAW', '12345', 'Kevin Avicena', 'Colomadu', '6281765834560', '2023-06-05', 'member'),
 ('M0006', 'losPollos', 'hermanos', 'Gustavo Fring', 'Albuquerque', '628378459965', '2023-06-21', 'member'),
 ('M0007', 'betterCallSaul', 'bcsaul', 'Saul Goodman', 'Albuquerque', '6283487155769', '2023-06-25', 'member'),
 ('M0008', 'dahyun7', 'twice', 'Kim Dahyun', 'Seongnam', '628945322268', '2023-06-30', 'member'),
-('M0009', 'walterW', 'heisenberg', 'Walter H White', 'Albuquerque', '628366718249', '2023-07-15', 'member'),
+('M0009', 'walterW', 'heisenberg', 'Walter H White', 'Albuquerque', '628366718249', '2023-06-30', 'member'),
 ('M0010', 'wendyRV', 'wendy', 'Son Seung Wan', 'Seoul', '628178415584', '2023-07-24', 'member'),
 ('M0011', 'chingchaeng', '123456', 'Son Chaeyoung', 'Seoul', '6287785624439', '2023-07-24', 'member');
 
