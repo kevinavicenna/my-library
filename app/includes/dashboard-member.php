@@ -26,7 +26,7 @@
         <div class="col-12 col-lg">
             
             <!-- Banner -->
-            <div class="row"
+            <div class="row">
                 <?php include('banner-member.php'); ?>
             </div>
             <!-- End of Banner -->

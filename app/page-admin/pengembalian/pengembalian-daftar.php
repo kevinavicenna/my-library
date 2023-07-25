@@ -43,7 +43,7 @@
               <th>Tanggal Peminjaman</th>
               <th>Tanggal Jatuh Tempo</th>
               <th>Tanggal Pengembalian</th>
-              <th>Status</th>
+              <th>Keterangan</th>
               <th>Action</th>
             </tr>
           </thead>
